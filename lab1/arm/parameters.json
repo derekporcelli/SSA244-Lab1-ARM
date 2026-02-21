@@ -1,21 +1,46 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "virtualMachines_WEB1_name": {
-            "value": null
-        },
-        "publicIPAddresses_WEB1_ip_name": {
-            "value": null
-        },
-        "virtualNetworks_VNET_LAB1_name": {
-            "value": null
-        },
-        "networkInterfaces_web1310_z3_name": {
-            "value": null
-        },
-        "networkSecurityGroups_NSG_WEB_name": {
-            "value": null
-        }
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "virtualMachines_WEB1_name": {
+      "defaultValue": "WEB1",
+      "type": "String"
+    },
+    "publicIPAddresses_WEB1_ip_name": {
+      "defaultValue": "WEB1-ip",
+      "type": "String"
+    },
+    "virtualNetworks_VNET_LAB1_name": {
+      "defaultValue": "VNET-LAB1",
+      "type": "String"
+    },
+    "networkInterfaces_web1310_z3_name": {
+      "defaultValue": "web1310_z3",
+      "type": "String"
+    },
+    "networkSecurityGroups_NSG_WEB_name": {
+      "defaultValue": "NSG-WEB",
+      "type": "String"
+    },
+    "publicIPAddresses_LB_frontend_name": {
+      "type": "String",
+      "defaultValue": "pip-lb-frontend-zone2"
+    },
+    "loadBalancers_LB_public_name": {
+      "type": "String",
+      "defaultValue": "lb-public-web"
+    },
+    "virtualMachines_WEB2_name": {
+      "type": "String",
+      "defaultValue": "WEB2"
+    },
+        "publicIPAddresses_WEB2_ip_name": {
+      "defaultValue": "WEB2-ip",
+      "type": "String"
+    },
+    "networkInterfaces_web1311_z3_name": {
+      "type": "String",
+      "defaultValue": "web1311_z3"
     }
+  }
 }
